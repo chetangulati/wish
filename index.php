@@ -185,7 +185,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', end
   <audio src="song.mp3" id="song"></audio>
   <section id="wish" class="hide animated">
     <div class="card">
-      <h1>Vrinda</h1>
+      <h1><?php if(isset($_GET["n"])){
+        echo $_GET["n"];
+      }
+      else{
+        echo "Your Name";
+      } ?></h1>
       <h2 style="padding: 10px; box-sizing: border-box;text-shadow: 3px 2px 3px rgba(255,255,255,.2);color: rgba(0,0,0,0.6); text-align: center; font-size: 30px;">Wishes you</h2>
       <img src="pic.gif" alt="happy independence day" style="padding-top: 10px; width: 100%;">
     </div>
