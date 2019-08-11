@@ -156,6 +156,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', end
   .hide{
     display: none;
   }
+  .card{
+    width: 90%;
+    background: #fff;
+    box-sizing: border-box;
+    margin: 5%;
+    height: 90%;
+    opacity: 0.8;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+  }
     </style>
   </head>
   <body>
@@ -164,14 +174,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', end
         <span class="text" style="bottom: -2%;color: #ffe400;">the special message</span>
     <img src="ashokchakr.png" class="ashokchakr rotation" id="click" alt="Ashok Chakr">
   </section>
-
+  <audio src="song.mp3" id="song"></audio>
   <section id="wish" class="hide animated">
-    Vrinda wishes you a happy Independence day
+    <div class="card">
+
+    </div>
   </section>
   <script type="text/javascript">
     $("#click").click(function () {
       $("#container").addClass("fadeOutLeft");
-      $("#wish").removeClass("hide")
+      $("#wish").removeClass("hide");
+      $("#song")[0].play();
     })
   </script>
   </body>
